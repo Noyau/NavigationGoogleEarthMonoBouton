@@ -1,0 +1,105 @@
+
+/****************************************
+ * auteur  : Romain Fontaine
+ * contact : romain.fontaine@etu.u-bordeaux1.fr
+ ****************************************/
+
+/* -- Appliquer le style a la zone d'affichage des erreurs */
+#page-erreur {
+	text-align: center;
+	color: #f53b3b;
+}
+
+/* -- Appliquer le style a la zone d'affichage de la commande */
+#page-commande-groupe {
+	text-align: center;
+	color: #f59b3b;
+}
+
+/* -- Appliquer le style a l'aide textuelle */
+#page-aide-textuelle {
+	padding: 20px;
+	text-align: center;
+}
+
+/* -- Appliquer le style au conteneur du globe */
+#page-contenu {
+	float: left;
+}
+
+#page-contenu-globe {
+	width: 800px;
+	height: 600px;
+}
+
+/* -- Appliquer le style au panneau de commandes et a ses composants */
+#page-panneau-commandes {
+	float: right;
+	width: 475px;
+}
+
+#page-panneau-commandes > fieldset {
+	border: 1px solid #d0d0d0;
+	border-radius: 3px;
+	background-color: #e0e0e0;
+	padding: 10px;
+}
+#page-panneau-commandes > fieldset legend {
+	padding: 0 15px;
+	font-weight: bold;
+	color: #616161;
+}
+#page-panneau-commandes > fieldset ul {}
+#page-panneau-commandes > fieldset ul li {}
+
+#page-panneau-commandes fieldset ul {
+	list-style: none;
+}
+#page-panneau-commandes fieldset ul li {}
+
+
+/* -- Appliquer le style a la barre de progression */
+#barre-chargement {
+	border: 1px solid #3296fa;
+	height: 20px;
+	margin: 5px;
+	border-radius: 2px;
+	background-color: #ededed;
+}
+
+#barre-chargement > span {
+	display: block;
+	width: 0%;
+	height: 100%;
+	background-color: #b3d7ff;
+}
+
+/* -- Appliquer le style general des commandes */
+.com-groupe {
+	border: 1px solid #ededed;
+	padding: 5px 15px 10px;
+}
+.com-groupe-hover {
+	background-color: #f0f0f0;
+	border-color: #616161;
+}
+
+.commande {}
+.commande > h1 {
+	border: 1px solid #d0d0d0;
+	border-radius: 2px;
+	padding: 3px 13px;
+}
+.commande > blockquote {
+	display: none;
+}
+
+.commande-hover {}
+.commande-hover > h1 {
+	background-color: #b5f777;
+}
+
+.commande-retour-hover {
+	background-color: #b43c32;
+	color: #fefefe;
+}

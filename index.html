@@ -1,0 +1,78 @@
+<!Doctype html>
+<html lang="fr">
+	<head>
+		<meta name="author" content="Romain Fontaine">
+		<meta name="reply-to" content="romain.fontaine@etu.u-bordeaux1.fr">
+		
+		<meta charset="utf-8">
+		<title>Google Earth | Naviguez avec une seule touche... !</title>
+
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style-page.css">
+		<style type="text/css">
+			#page-contenu   { width:  800px; }
+		</style>
+
+		<script type="text/javascript">
+			document.addEventListener("keydown", function() {
+				document.getElementById("page-contenu").getElementsByTagName("h3")[0].textContent ="Vous serez redirigé dans une seconde...";
+				
+				var delai = setTimeout(function() {
+					window.location = "appli.html";
+				}, 1000);
+			}, false);
+		</script>
+	</head>
+	<body>
+
+		<div id="page-conteneur">
+
+			<!-- l'en-tete de la page -->
+			<header>
+				<h1 id="page-titre">Google Earth</h1>
+				<blockquote id="page-slogan">Naviguez avec une seule touche... !</blockquote>
+			</header>
+
+			<!-- le contenu de la page -->
+			<section id="page-contenu">
+				<h1>Bienvenue</h1>
+				<p>Google Earth est un plugin permettant de naviguer et manipuler un globe en 3D ! Vous pouvez alors vous balader sur une Terre en 3D depuis votre navigateur internet sans bouger de chez vous.</p>
+
+				<h2>Oui mais encore ?</h2>
+				<p>Nous vous proposons ici de profiter de Google Earth... en n'utilisant qu'une seule touche !</p>
+
+				<h2>Mais comment ça marche ?</h2>
+				<p>Vous n'avez qu'une touche et n'avez donc qu'à appuyer et relâcher le bouton. En fonction que vous appuyez plus ou moins longtemps sur la touche, vous activez successivement les fonctionnalités de l'application et pouvez donc naviguer avec Google Earth simplement.</p>
+
+				<h2>&Ccedil;a a l'air compliqué tout ça...</h2>
+				<p>Il n'y a pas de soucis à se faire ! Une aide textuelle sera affichée en permanence pour vous guider dans votre expérience.</p>
+
+				<h3>Appuyez sur une touche pour démarrer l'application.</h3>
+			</section>
+
+			<!-- le pied de la page -->
+			<footer>
+				<fieldset>
+					<legend>Compatibilité du Plug-in Google Earth</legend>
+					<ul>
+						<li>
+							<h1>Navigateurs</h1>
+							<ul>
+								<li>
+									<span style="color:#0040e0;">G</span><span style="color:#e02040;">o</span><span style="color:#f0a000;">o</span><span style="color:#0040e0;">g</span><span style="color:#00a020;">l</span><span style="color:#e02040;">e</span> Chrome <span class="_indice">(version développée)</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h1>Systèmes d'exploitation</h1>
+							<ul>
+								<li>Windows <span class="_indice">(version développée)</span></li>
+							</ul>
+						</li>
+					</ul>
+				</fieldset>
+			</footer>
+
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,119 @@
+
+/****************************************
+ * auteur  : Romain Fontaine
+ * contact : romain.fontaine@etu.u-bordeaux1.fr
+ ****************************************/
+ 
+/* --- Reinitialiser les marges et initialiser les fontes */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "tahoma", "calibri", "trebuchet ms", "verdana", arial, sans-serif;
+	font-size: 1em;
+	text-align: justify;
+	color: #313131;
+}
+
+/* --- Appliquer l'arriere-plan */
+html {
+	background-color: #ededed;
+}
+
+/* --- Appliquer le style general */
+._clear {
+	clear: both;
+}
+
+._indice {
+	font-size: 0.7em;
+	font-style: italic;
+}
+
+/* --- Appliquer le style au titre de la page et au slogan */
+#page-titre {
+	font-size: 1.7em;
+	text-align: center;
+	color: #d0d0d0;
+}
+#page-slogan {
+	padding: 5px 80px;
+	font-size: 0.9em;
+	text-align: right;
+	font-style: italic;
+	color: #a0a0a0;
+}
+
+/* --- Appliquer le style au conteneur de la page et a ses composants */
+#page-conteneur {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+#page-conteneur > header {
+	width: 640px;
+	margin: 25px auto;
+}
+/* #page-conteneur > header h1 {} */
+/* #page-conteneur > header blockquote {} */
+
+#page-conteneur > footer {
+	width: 640px;
+	margin: 25px auto;
+}
+#page-conteneur > footer fieldset {
+	border: #c0c0c0 solid 1px;
+	border-radius: 3px;
+	padding: 20px;
+}
+#page-conteneur > footer fieldset legend {
+	padding: 0 5px;
+	font-size: 0.8em;
+	font-style: italic;
+	font-weight: bold;
+	color: #808080;
+}
+#page-conteneur > footer fieldset > ul {
+	list-style: none;
+}
+/* #page-conteneur > footer fieldset > ul li {} */
+#page-conteneur > footer fieldset > ul li h1 {
+	margin: 10px 0;
+	text-align: center;
+	text-decoration: underline;
+	font-weight: normal;
+}
+#page-conteneur > footer fieldset > ul li > ul {
+	list-style: none;
+}
+#page-conteneur > footer fieldset > ul li > ul li {
+	padding: 0 50px;
+}
+#page-conteneur > footer fieldset > ul li > ul li span._indice {
+	color: #616161;
+}
+
+/* --- Appliquer le style au contenu de la page et a ses composants */
+#page-contenu {
+	margin: 0 auto;
+}
+
+#page-contenu > h1 {
+	margin: 20px 0;
+	text-align: center;;
+}
+#page-contenu > h2 {
+	text-indent: 30px;
+	margin: 10px 0;
+	padding: 5px;
+	font-style: italic;
+	color: #606060
+}
+#page-contenu > h3 {
+	margin: 20px 0;
+	text-align: center;
+	cursor: pointer;
+	color: #3296fa;
+}
+#page-contenu > p {
+	margin: 5px;
+}

@@ -1,0 +1,109 @@
+<!Doctype html>
+<html lang="fr">
+	<head>
+		<meta name="author" content="Romain Fontaine">
+		<meta name="reply-to" content="romain.fontaine@etu.u-bordeaux1.fr">
+		
+		<meta charset="utf-8">
+		<title>Google Earth | Naviguez avec une seule touche... !</title>
+
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style-page.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style-appli.css">
+
+		<!-- Script : chargement du plugin -->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+		<!-- Script : chargement de jQuery -->
+		<script type="text/javascript" src="js/jquery/jquery-1.7.2.min.js"></script>
+
+		<!-- Script : mes scripts -->
+		<script type="text/javascript" src="js/arborescence.js"></script>
+		<script type="text/javascript" src="js/controles.js"></script>
+		<script type="text/javascript" src="js/commandes.js"></script>
+		<script type="text/javascript" src="js/panneau-commandes.js"></script>
+
+		<!-- Script : initialisation du globe -->
+		<script type="text/javascript" src="js/globe.js"></script>
+
+		<!-- Script : initialisation -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/* - Initialiser le panneau de commandes */
+				var idBaliseCommandesGroupeGlobe  = "#com-groupe-globe";
+				var idBaliseCommandesGroupeCamera = "#com-groupe-camera";
+
+				var baliseCommandesGroupeGlobe  = $(idBaliseCommandesGroupeGlobe);
+				var baliseCommandesGroupeCamera = $(idBaliseCommandesGroupeCamera);
+
+				var nbrCommandesGroupeGlobe = Commande.listeCommandesGroupeGlobe.length;
+				var nbrCommandesGroupeCamera = Commande.listeCommandesGroupeCamera.length;
+
+				for(var i = 0; i < nbrCommandesGroupeGlobe; ++i)
+					baliseCommandesGroupeGlobe.append(Commande.listeCommandesGroupeGlobe[i].creerBalise());
+				for(var i = 0; i < nbrCommandesGroupeCamera; ++i)
+					baliseCommandesGroupeCamera.append(Commande.listeCommandesGroupeCamera[i].creerBalise());
+
+				var idClasseCommandes = ".commande";
+				var classeCommandes = $(idClasseCommandes);
+				var classeCommandesDetails = classeCommandes.children("blockquote");
+
+				classeCommandesDetails.hide();
+
+				PanneauCommandes.surlignerGroupeCourant();
+
+				/* - Capturer les evenements */
+				Bouton.capturerEvenements();
+			});
+		</script>
+
+	</head>
+	<body>
+
+		<div id="page-conteneur">
+
+			<!-- l'en-tete de la page -->
+			<header>
+				<h1 id="page-titre">Google Earth</h1>
+				<blockquote id="page-slogan">Naviguez avec une seule touche... !</blockquote>
+				<h2 id="page-erreur"></h2>
+				<h3 id="page-commande-groupe">Vous n'avez sélectionné aucune commande...</h3>
+				<blockquote id="page-aide-textuelle"></blockquote>
+			</header>
+
+			<!-- le contenu de la page -->
+			<section id="page-contenu">
+				<div id="page-contenu-globe"></div>
+			</section>
+
+			<!-- le panneau de commandes -->
+			<aside id="page-panneau-commandes">
+				<fieldset>
+					<legend>Commandes</legend>
+					<div id="barre-chargement"><span></span></div>
+					<ul>
+						<li>
+							<fieldset id="com-groupe-globe" class="com-groupe">
+								<legend>Globe</legend>
+								<ul>
+									<!-- ici seront chargees les commandes -->
+								</ul>
+							</fieldset>
+						</li>
+						<li>
+							<fieldset id="com-groupe-camera" class="com-groupe">
+								<legend>Camera</legend>
+								<ul>
+									<!-- ici seront chargees les commandes -->
+								</ul>
+							</fieldset>
+						</li>
+					</ul>
+				</fieldset>
+			</aside>
+
+			<footer class="_clear" style="height: 20px"></footer>
+
+		</div>
+
+	</body>
+</html>

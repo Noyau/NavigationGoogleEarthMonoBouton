@@ -4,7 +4,7 @@ Code réalisé lors d'un stage. L'objectif était de réaliser une interface de 
 ------------------------------------------------------------------------------------
 
 Auteur  : Fontaine Romain<br/>
-Contact : romain.fontaine@etu.u-bordeaux.fr
+Contact : noyau.dev@gmail.com
 
 Projet : Google Earth - navigation avec un seul bouton<br/>
 Technologie : HTML/CSS et Javascript
